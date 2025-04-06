@@ -1,4 +1,4 @@
-# 🔗 URL Shortener - Node.js + MongoDB + EJS
+# URL Shortener - Node.js + MongoDB + EJS
 
 A simple yet functional URL shortener built using Node.js with Express, MongoDB for data storage, and EJS for templating. The application follows the MVC (Model-View-Controller) architecture for clean separation of concerns.
 
@@ -17,6 +17,3 @@ A simple yet functional URL shortener built using Node.js with Express, MongoDB 
 - **Templating Engine**: EJS
 - **Styling**: CSS
 - **Architecture**: MVC (Model-View-Controller)
-
-## 📁 Project Structure
-
