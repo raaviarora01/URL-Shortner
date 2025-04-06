@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Track Link Clicks - URL Shortener</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>Analytics for Short ID : <%= shortId%></h1>
+    <p>Total Clicks: <strong><%= totalClicks %></strong></p>
+
+    <table>
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Timestamp</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% visitHistory.forEach((visit, index) => { %>
+        <tr>
+          <td><%= index + 1 %></td>
+          <td><%= new Date(visit.timestamp).toLocaleString() %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <a href="/">⬅ Back to Home</a>
+  </body>
+</html>

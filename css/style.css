@@ -1,0 +1,123 @@
+/* General Page Styling */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f6fa;
+  color: #2f3640;
+  margin: 0;
+  padding: 2rem;
+}
+
+h1 {
+  color: #273c75;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: #273c75;
+  font-weight: 600;
+}
+
+a:hover {
+  color: #192a56;
+}
+
+/* Form Styling */
+form {
+  max-width: 500px;
+  margin: 0 auto 2rem;
+  padding: 1rem;
+  background-color: #dcdde1;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 0.6rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  background-color: #00a8ff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #0097e6;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+th,
+td {
+  padding: 0.8rem;
+  text-align: left;
+  border: 1px solid #dcdde1;
+}
+
+th {
+  background-color: #f1f2f6;
+  color: #2f3640;
+}
+
+td a {
+  color: #0097e6;
+  text-decoration: none;
+}
+
+td a:hover {
+  text-decoration: underline;
+}
+
+/* Container Blocks */
+.container {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+/* Generated URL Info */
+.generated-url {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #e1f5fe;
+  border-left: 5px solid #00a8ff;
+  border-radius: 4px;
+  color: #006494;
+  font-size: 1.1rem;
+}
+
+.generated-url a {
+  color: #0077b6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.generated-url a:hover {
+  text-decoration: underline;
+}

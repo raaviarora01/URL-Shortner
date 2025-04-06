@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shorten Your Links - URL Shortener</title>
+    <link rel="stylesheet" href="/css/style.css" />
+  </head>
+  <body>
+    <h1>URL Shortener</h1>
+    <div>
+      <form action="/url" method="post">
+        <label>Enter your original URL</label>
+        <input type="text" name="url" placeholder="https://example.com" />
+        <button type="submit">Generate</button>
+      </form>
+    </div>
+
+    <div>
+      <% if(locals.urls){%>
+      <table>
+        <thead>
+          <th>S. No</th>
+          <th>Short ID</th>
+          <th>Redirect URL</th>
+          <th>Clicks</th>
+        </thead>
+        <tbody>
+          <% urls.forEach((url, index) => { %>
+          <tr>
+            <td><%= index+1%></td>
+            <td><a href="/url/<%= url.shortId %>"><%= url.shortId %></a></td>
+            <td><%= url.redirectURL%></td>
+            <td><a href="/url/analytics/<%= url.shortId %>"><%= url.visitHistory.length%></a></td>
+          </tr>
+          <%}); %>
+        </tbody>
+      </table>
+      <% } %>
+    </div>
+  </body>
+</html>
