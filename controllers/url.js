@@ -8,7 +8,8 @@ async function generateNewShortURL(req, res) {
   await URL.create({
     shortId: shortID,
     redirectURL: body.url,
-    visitHistory: []
+    visitHistory: [],
+    createdBy: req.user._id
   });
 
   return res.render("generated-url", { id: shortID });

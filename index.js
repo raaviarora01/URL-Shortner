@@ -1,9 +1,13 @@
 const express = require("express");
 const path = require("path");
+const cookieParser = require("cookie-parser");
 const { connectMongoDB } = require("./connection");
+const { restrictToLoggedInUserOnly, checkAuth } = require("./middlewares/auth");
+const URL = require("./models/url");
+
 const URLRoute = require("./routes/url");
 const staticRoute = require("./routes/staticRouter");
-const URL = require("./models/url");
+const userRoute = require("./routes/user");
 
 const app = express();
 const PORT = 8001;
@@ -19,8 +23,10 @@ app.use('/css', express.static(path.join(__dirname, 'css')));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
 
-app.use('/url', URLRoute);
-app.use('/', staticRoute);
+app.use('/url', restrictToLoggedInUserOnly, URLRoute);
+app.use('/user', userRoute);
+app.use('/', checkAuth, staticRoute);
 
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
